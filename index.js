@@ -65,9 +65,8 @@ async function getWorkOrders(token, hostName) {
 					Conditions: [
 						{
 							PropertyName: 'LastActionDateUtc',
-							Operator: 'GreaterOrEqual',
-							Values: [new Date(Math.floor((Date.now() - 300000) / 300000) * 
-300000)]
+							Operator: 'Between',
+							Values: [new Date(Math.floor((Date.now() - 300000) / 300000) * 300000), new Date(Math.floor(Date.now() / 300000) * 300000)]
 						},
 						{
 							PropertyName: 'LastAction.LastAction.TypeId',
