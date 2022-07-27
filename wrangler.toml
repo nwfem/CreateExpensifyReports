@@ -1,0 +1,7 @@
+name = "create-expensify-reports"
+main = "index.js"
+workers_dev = false
+compatibility_date = "2022-06-26"
+
+[triggers]
+crons = ["*/5 * * * *"]
